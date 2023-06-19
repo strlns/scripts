@@ -1,0 +1,18 @@
+alias cd-gitroot="cd \$(git rev-parse --show-toplevel)"
+alias listening-procs=">&1 lsof -i -P | grep LISTEN"
+alias listening-procs-sudo="sudo 2>&1 lsof -i -P | grep LISTEN"
+
+#This kills ALL node processes in userspace.. including services such as Homebridge
+alias killnode="killall -9 node"
+
+alias utctime="TZ=UTC date"
+
+#killbyport() {
+#  PORTNUMBER=$1 && echo "$PORTNUMBER" && PID=$(lsof -t -i:"$PORTNUMBER") && echo "Killing $PID" && echo $PID | xargs kill -9
+#}
+
+alias killbyport="/Users/moritz/scripts/killbyport.sh"
+alias backup="/Users/moritz/scripts/backup.sh"
+
+#macos-specific, see https://github.com/keepassxreboot/keepassxc/issues/1697
+alias keepassxc-cli=/Applications/KeePassXC.app/Contents/MacOS/keepassxc-cli
